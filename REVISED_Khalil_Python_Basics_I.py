@@ -72,6 +72,7 @@ for i in range(-size, size+1): # iterating from -5 to 5 and skipping 0 and 1 to 
 
 # c)
 print('\n')
+'''
 input_Value = 1
 # Fill in the code here
 i = 0 
@@ -82,6 +83,24 @@ while i*i <= input_Value:
         break 
     if (i >=  (input_Value/2)): # since the square root will always be less than or equal to half the original value 
         print ('The number is not a perfect square')
+'''
+# NEW CODE:
+input_Value = 0
+# Fill in the code here
+i = 1 
+if input_Value != 0:
+    while i*i <= input_Value:
+        condition = False
+        if (input_Value%i ==0) and (input_Value/i == i):
+            condition = True 
+            break
+        i=i+1
+    if condition:
+        print('The number is a perfect square of square root: ', i )
+    else:
+        print('The number is NOT a perfect square.')
+else:
+    print('The number is a perfect square of square root: ', 0 )
 # I had to start i from 0 rather than 1,
 # %%
 
